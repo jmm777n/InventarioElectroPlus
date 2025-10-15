@@ -86,7 +86,7 @@ namespace InventarioElectroPlus
                 }
                 if (inventario.Exists(p => string.Equals(p.Codigo, codigo, StringComparison.OrdinalIgnoreCase)))
                 {
-                    Console.WriteLine("Ya existe un producto con ese código. Intente con otro.");
+                    Console.WriteLine("Codigo de producto existente. Intente con otro codigo.");
                     continue;
                 }
                 break;
@@ -120,7 +120,7 @@ namespace InventarioElectroPlus
                 Cantidad = cantidad
             });
 
-            Console.WriteLine("Producto agregado correctamente.");
+            Console.WriteLine("Producto agregado correctamente al inventario.");
         }
 
         static void ListarProductos()
@@ -128,14 +128,14 @@ namespace InventarioElectroPlus
             Console.WriteLine("\n-- Lista de productos --");
             if (inventario.Count == 0)
             {
-                Console.WriteLine("No hay productos cargados.");
+                Console.WriteLine("No hay productos cargados en inventario.");
                 return;
             }
 
             Console.WriteLine("{0,-10} | {1,-20} | {2,10} | {3,10}", "Código", "Nombre", "Precio", "Cantidad");
             Console.WriteLine(new string('-', 60));
 
-            Console.WriteLine(
+            
             foreach (var p in inventario)
             {
                 Console.WriteLine("{0,-10} | {1,-20} | {2,10:F2} | {3,10}",
