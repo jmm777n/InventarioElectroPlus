@@ -170,10 +170,14 @@ namespace InventarioElectroPlus
                 return;
             }
 
-            Console.WriteLine("Codigo|Nombre|Precio|Cantidad");
+            Console.WriteLine("{0,-10} | {1,-20} | {2,10} | {3,10}", "Código", "Nombre", "Precio", "Cantidad");
+            Console.WriteLine(new string('-', 60));
+
+            
             foreach (var p in sinStock)
             {
-                Console.WriteLine($"{p.Codigo}|{p.Nombre}|{p.Precio:F2}|{p.Cantidad}");
+                Console.WriteLine("{0,-10} | {1,-20} | {2,10:F2} | {3,10}",
+                    p.Codigo, p.Nombre, p.Precio, p.Cantidad);
             }
         }
 
