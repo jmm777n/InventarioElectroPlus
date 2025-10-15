@@ -28,16 +28,16 @@ namespace InventarioElectroPlus
 
                 switch (opcion)
                 {
-                    case "1":
+                    case "a":
                         AgregarProducto();
                         break;
-                    case "2":
+                    case "b":
                         ListarProductos();
                         break;
-                    case "3":
+                    case "c":
                         BuscarPorCodigo();
                         break;
-                    case "4":
+                    case "d":
                         MostrarSinStock();
                         break;
                     case "S":
@@ -61,10 +61,10 @@ namespace InventarioElectroPlus
         static void MostrarMenu()
         {
             Console.WriteLine("==== Inventario Rápido - ElectroPlus ====");
-            Console.WriteLine("1) Agregar producto");
-            Console.WriteLine("2) Lista de productos");
-            Console.WriteLine("3) Buscar producto por Código");
-            Console.WriteLine("4) Mostrar productos con Cantidad = 0");
+            Console.WriteLine("a) Agregar producto");
+            Console.WriteLine("b) Lista de productos");
+            Console.WriteLine("c) Buscar producto por Código");
+            Console.WriteLine("d) Mostrar productos con Cantidad = 0");
             Console.WriteLine("S) Salir");
             Console.Write("Seleccione una opción: ");
         }
